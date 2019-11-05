@@ -15,6 +15,7 @@ org.jgrapht.alg.lca
 org.jgrapht.alg.matching
 org.jgrapht.alg.matching.blossom.v5
 org.jgrapht.alg.partition
+org.jgrapht.alg.planar
 org.jgrapht.alg.scoring
 org.jgrapht.alg.shortestpath
 org.jgrapht.alg.spanning

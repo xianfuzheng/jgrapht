@@ -1,6 +1,7 @@
 org.jgrapht
 org.jgrapht.alg
 org.jgrapht.alg.clique
+org.jgrapht.alg.clustering
 org.jgrapht.alg.color
 org.jgrapht.alg.connectivity
 org.jgrapht.alg.cycle

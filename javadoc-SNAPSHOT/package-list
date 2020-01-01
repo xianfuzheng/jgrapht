@@ -36,6 +36,17 @@ org.jgrapht.graph.concurrent
 org.jgrapht.graph.guava
 org.jgrapht.graph.specifics
 org.jgrapht.io
+org.jgrapht.nio
+org.jgrapht.nio.csv
+org.jgrapht.nio.dimacs
+org.jgrapht.nio.dot
+org.jgrapht.nio.gml
+org.jgrapht.nio.graph6
+org.jgrapht.nio.graphml
+org.jgrapht.nio.json
+org.jgrapht.nio.lemon
+org.jgrapht.nio.matrix
 org.jgrapht.opt.graph.fastutil
+org.jgrapht.opt.graph.sparse
 org.jgrapht.traverse
 org.jgrapht.util

@@ -13,7 +13,7 @@ your own applications.  We'll cover the following topics:
 
 ## Development Setup
 
-First, [set up your development environment](https://github.com/jgrapht/jgrapht/wiki/How-to-use-JGraphT-as-a-dependency-in-your-projects) with JGraphT as a dependency.
+First, [set up your development environment](https://github.com/jgrapht/jgrapht/wiki/Users:-How-to-use-JGraphT-as-a-dependency-in-your-projects) with JGraphT as a dependency.
 
 ## Hello JGraphT
 
@@ -712,7 +712,7 @@ public class JGraphXAdapterDemo
 
 If you want to run the demo programs excerpted throughout this
 overview, see
-[these instructions](https://github.com/jgrapht/jgrapht/wiki/Running-JGraphT-demos).
+[these instructions](https://github.com/jgrapht/jgrapht/wiki/Users:-Running-JGraphT-demos).
 You can also find the full source code in
 [github](https://github.com/jgrapht/jgrapht/tree/master/jgrapht-demo/src/main/java/org/jgrapht/demo).
 

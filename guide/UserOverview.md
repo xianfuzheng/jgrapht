@@ -26,7 +26,8 @@ at a simple example of creating a directed graph:
 
 import org.jgrapht.*;
 import org.jgrapht.graph.*;
-import org.jgrapht.io.*;
+import org.jgrapht.nio.*;
+import org.jgrapht.nio.dot.DOTExporter;
 import org.jgrapht.traverse.*;
 
 import java.io.*;
@@ -475,24 +476,13 @@ Continuing our HelloJGraphT example, here's how to export a graph in [GraphViz .
 
 ```java
 
-        // use helper classes to define how vertices should be rendered,
-        // adhering to the DOT language restrictions
-        ComponentNameProvider<URI> vertexIdProvider = new ComponentNameProvider<URI>()
-        {
-            public String getName(URI uri)
-            {
-                return uri.getHost().replace('.', '_');
-            }
-        };
-        ComponentNameProvider<URI> vertexLabelProvider = new ComponentNameProvider<URI>()
-        {
-            public String getName(URI uri)
-            {
-                return uri.toString();
-            }
-        };
-        GraphExporter<URI, DefaultEdge> exporter =
-            new DOTExporter<>(vertexIdProvider, vertexLabelProvider, null);
+        DOTExporter<URI, DefaultEdge> exporter =
+            new DOTExporter<>(v -> v.getHost().replace('.', '_'));
+        exporter.setVertexAttributeProvider((v) -> {
+            Map<String, Attribute> map = new LinkedHashMap<>();
+            map.put("label", DefaultAttribute.createAttribute(v.toString()));
+            return map;
+        });
         Writer writer = new StringWriter();
         exporter.exportGraph(hrefGraph, writer);
         System.out.println(writer.toString());

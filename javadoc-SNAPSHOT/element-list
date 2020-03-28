@@ -48,6 +48,7 @@ org.jgrapht.nio.graphml
 org.jgrapht.nio.json
 org.jgrapht.nio.lemon
 org.jgrapht.nio.matrix
+org.jgrapht.nio.tsplib
 org.jgrapht.opt.graph.fastutil
 org.jgrapht.opt.graph.sparse
 org.jgrapht.traverse

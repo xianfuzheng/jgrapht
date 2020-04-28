@@ -42,6 +42,7 @@ org.jgrapht.nio
 org.jgrapht.nio.csv
 org.jgrapht.nio.dimacs
 org.jgrapht.nio.dot
+org.jgrapht.nio.gexf
 org.jgrapht.nio.gml
 org.jgrapht.nio.graph6
 org.jgrapht.nio.graphml

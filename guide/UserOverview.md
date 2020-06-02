@@ -27,7 +27,7 @@ at a simple example of creating a directed graph:
 import org.jgrapht.*;
 import org.jgrapht.graph.*;
 import org.jgrapht.nio.*;
-import org.jgrapht.nio.dot.DOTExporter;
+import org.jgrapht.nio.dot.*;
 import org.jgrapht.traverse.*;
 
 import java.io.*;
@@ -302,9 +302,10 @@ public final class CompleteGraphDemo
         Iterator<String> iter = new DepthFirstIterator<>(completeGraph);
         while (iter.hasNext()) {
             String vertex = iter.next();
-            System.out.println(
-                "Vertex " + vertex + " is connected to: "
-                    + completeGraph.edgesOf(vertex).toString());
+            System.out
+                .println(
+                    "Vertex " + vertex + " is connected to: "
+                        + completeGraph.edgesOf(vertex).toString());
         }
     }
 }

@@ -85,8 +85,8 @@ a backstabby form of non-symmetric friendship via a directed graph:
 ```
 
 Since the `RelationshipEdge` class does not have a default constructor, edges
-must be explicitly instantiated and added via [addEdge(V,V,E)](http://jgrapht.org/javadoc/org/jgrapht/Graph.html#addEdge-V-V-E-) rather than implicitly instantiated via
-[addEdge(V,V)](http://jgrapht.org/javadoc/org/jgrapht/Graph.html#addEdge-V-V-).
+must be explicitly instantiated and added via [addEdge(V,V,E)](http://jgrapht.org/javadoc/org.jgrapht.core/org/jgrapht/Graph.html#addEdge-V-V-E-) rather than implicitly instantiated via
+[addEdge(V,V)](http://jgrapht.org/javadoc/org.jgrapht.core/org/jgrapht/Graph.html#addEdge-V-V-).
 
 Once the graph has been populated, label information can be accessed during traversal:
 
@@ -102,7 +102,7 @@ Once the graph has been populated, label information can be accessed during trav
         }
 ```
 
-Given two vertices, an application can check the label on the edge between them by using [getEdge(V,V)](http://jgrapht.org/javadoc/org/jgrapht/Graph.html#getEdge-V-V-):
+Given two vertices, an application can check the label on the edge between them by using [getEdge(V,V)](http://jgrapht.org/javadoc/org.jgrapht.core/org/jgrapht/Graph.html#getEdge-V-V-):
 
 ```java
     private static boolean isEnemyOf(

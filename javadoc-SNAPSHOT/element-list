@@ -22,6 +22,7 @@ org.jgrapht.alg.partition
 org.jgrapht.alg.planar
 org.jgrapht.alg.scoring
 org.jgrapht.alg.shortestpath
+org.jgrapht.alg.similarity
 org.jgrapht.alg.spanning
 org.jgrapht.alg.tour
 org.jgrapht.alg.transform

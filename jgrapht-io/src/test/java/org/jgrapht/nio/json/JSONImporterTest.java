@@ -30,8 +30,8 @@ import java.util.*;
 import static org.junit.Assert.*;
 
 /**
- * Tests for {@link JsonImporter}.
- * 
+ * Tests for {@link JSONImporter}.
+ *
  * @author Dimitrios Michail
  */
 public class JSONImporterTest
@@ -43,13 +43,13 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":\"1\" },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  { \"id\":\"3\" },\n"
                      + "  { \"id\":\"4\" }\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":\"1\", \"target\":\"2\" },\n"
                      + "  { \"source\":\"1\", \"target\":\"3\" }\n"
                      + "  ]\n"
@@ -81,13 +81,13 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":\"1\" },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  { \"id\":\"3\" },\n"
                      + "  { \"id\":\"4\" }\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":\"1\", \"target\":\"2\" },\n"
                      + "  { \"source\":\"1\", \"target\":\"3\" }\n"
                      + "  ]\n"
@@ -120,13 +120,13 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":1 },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  { \"id\":\"3\" },\n"
                      + "  { \"id\":4 }\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":1, \"target\":\"2\" },\n"
                      + "  { \"source\":1, \"target\":3 }\n"
                      + "  ]\n"
@@ -158,12 +158,12 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":1 },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  { \"id\":1 }\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":\"1\", \"target\":\"2\" }\n"
                      + "  ]\n"
                      + "}";
@@ -185,13 +185,13 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":1 },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":\"1\", \"target\":\"2\" },\n"
-                     + "  { \"target\":\"2\" },\n"                     
+                     + "  { \"target\":\"2\" },\n"
                      + "  ]\n"
                      + "}";
         // @formatter:on
@@ -212,11 +212,11 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":1 },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":\"1\" },\n"
                      + "  ]\n"
                      + "}";
@@ -238,13 +238,13 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":\"1\" },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  { \"id\":\"3\" },\n"
                      + "  { \"id\":\"4\" }\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":\"1\", \"target\":\"2\", \"weight\": 2.0 },\n"
                      + "  { \"source\":\"1\", \"target\":\"3\", \"weight\": 3.0 },\n"
                      + "  { \"source\":\"2\", \"target\":\"3\" }\n"
@@ -278,13 +278,13 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":\"1\" },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  { \"id\":\"3\" },\n"
                      + "  { \"id\":\"4\" }\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":\"1\", \"target\":\"2\", \"weight\": 2.0 },\n"
                      + "  { \"source\":\"1\", \"target\":\"3\", \"weight\": 3.0 },\n"
                      + "  { \"source\":\"2\", \"target\":\"3\" }\n"
@@ -318,7 +318,7 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":\"1\", \"label\": \"Label\", \"int\": 4, \"double\": 0.5, \"boolean\": true, \"boolean1\": false, \"novalue\": null }\n"
                      + "  ],\n"
                      + "  \"edges\": null"
@@ -371,7 +371,7 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":\"1\" }\n"
                      + "  ],\n"
                      + "  \"edges\": [\n"
@@ -428,7 +428,7 @@ public class JSONImporterTest
         // @formatter:off
         String input = "{\n"
                      + "  \"nodes\": [\n"
-                     + "  { \"id\":\"1\", \"custom\": { \"pi\": 3.14 } },\n"            
+                     + "  { \"id\":\"1\", \"custom\": { \"pi\": 3.14 } },\n"
                      + "  { \"id\":\"2\", \"array\": [ { \"obj\": 3.14 } ] }\n"
                      + "  ],\n"
                      + "  \"edges\": [\n"
@@ -504,13 +504,13 @@ public class JSONImporterTest
     {
         // @formatter:off
         String input = "{\n"
-                     + "  \"nodes\": [\n"    
+                     + "  \"nodes\": [\n"
                      + "  { \"id\":\"1\" },\n"
                      + "  { \"id\":\"2\" },\n"
                      + "  { },\n"
                      + "  { }\n"
                      + "  ],\n"
-                     + "  \"edges\": [\n"    
+                     + "  \"edges\": [\n"
                      + "  { \"source\":\"1\", \"target\":\"2\" }\n"
                      + "  ]\n"
                      + "}";

@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "id": "a"
+    },
+    {
+      "id": "b"
+    },
+    {
+      "id": "c"
+    },
+    {
+      "id": "d"
+    },
+    {
+      "id": "e"
+    },
+    {
+      "id": "f"
+    },
+    {
+      "id": "g"
+    },
+    {
+      "id": "h"
+    }
+  ],
+  "edges": [
+    {
+      "source": "a",
+      "target": "b",
+      "weight": 2.0
+    },
+    {
+      "source": "b",
+      "target": "c",
+      "weight": 2.0
+    },
+    {
+      "source": "b",
+      "target": "e",
+      "weight": 2.0
+    },
+    {
+      "source": "b",
+      "target": "f",
+      "weight": 2.0
+    },
+    {
+      "source": "c",
+      "target": "d",
+      "weight": 1.0
+    },
+    {
+      "source": "c",
+      "target": "g",
+      "weight": 1.0
+    },
+    {
+      "source": "d",
+      "target": "c",
+      "weight": 1.0
+    },
+    {
+      "source": "d",
+      "target": "h",
+      "weight": 1.0
+    },
+    {
+      "source": "h",
+      "target": "h",
+      "weight": 1.0
+    },
+    {
+      "source": "e",
+      "target": "a",
+      "weight": 1.0
+    },
+    {
+      "source": "e",
+      "target": "h",
+      "weight": 1.0
+    },
+    {
+      "source": "f",
+      "target": "g",
+      "weight": 1.0
+    },
+    {
+      "source": "g",
+      "target": "h",
+      "weight": 1.0
+    },
+    {
+      "source": "g",
+      "target": "f",
+      "weight": 1.0
+    }
+  ]
+}

@@ -8,6 +8,12 @@
     <version>1.5.1-SNAPSHOT</version>
     <description>A Java class library for graph-theory data structures and algorithms.</description>
     <url>http://www.jgrapht.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>org.jgrapht</groupId>
+            <artifactId>jgrapht-core</artifactId>
+        </dependency>
+    </dependencies>
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
@@ -314,6 +320,7 @@
         <module>jgrapht-guava</module>
         <module>jgrapht-demo</module>
         <module>jgrapht-dist</module>
+        <module>jgrapht-zheng</module>
     </modules>
 
     <profiles>

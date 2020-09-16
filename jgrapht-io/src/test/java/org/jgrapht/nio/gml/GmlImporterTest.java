@@ -31,7 +31,7 @@ import static org.junit.Assert.*;
 
 /**
  * Tests for {@link GmlImporter}.
- * 
+ *
  * @author Dimitrios Michail
  */
 public class GmlImporterTest
@@ -42,33 +42,7 @@ public class GmlImporterTest
         throws ImportException
     {
         // @formatter:off
-        String input = "graph [\n"
-                     + "  comment \"Sample Graph\"\n"
-                     + "  directed 1\n"
-                     + "  node [\n"
-                     + "    id 1\n"
-                     + "  ]\n"
-                     + "  node [\n"
-                     + "    id 2\n"
-                     + "  ]\n"
-                     + "  node [\n"
-                     + "    id 3\n"
-                     + "  ]\n"
-                     + "  node [\n"
-                     + "  ]\n"                     
-                     + "  edge [\n"
-                     + "    source 1\n"
-                     + "    target 2\n"
-                     + "  ]\n"
-                     + "  edge [\n"
-                     + "    source 2\n"
-                     + "    target 3\n"
-                     + "  ]\n"
-                     + "  edge [\n"
-                     + "    source 3\n"
-                     + "    target 1\n"
-                     + "  ]\n"
-                     + "]";
+        String input = readFromResourceFile("/gml/import/undirected_unweighted");
         // @formatter:on
 
         Graph<String, DefaultEdge> g = readGraph(input, DefaultEdge.class, false, false);
@@ -201,7 +175,7 @@ public class GmlImporterTest
                      + "    label \"3\""
                      + "  ]\n"
                      + "  node [\n"
-                     + "  ]\n"                     
+                     + "  ]\n"
                      + "  edge [\n"
                      + "    source 1\n"
                      + "    target 2\n"
@@ -212,11 +186,11 @@ public class GmlImporterTest
                      + "       target 1\n"
                      + "       label \"edge51\""
                      + "     ]"
-                     + "  ]\n"                     
+                     + "  ]\n"
                      + "  edge [\n"
                      + "    source 2\n"
                      + "    target 3\n"
-                     + "    label \"23\""                     
+                     + "    label \"23\""
                      + "  ]\n"
                      + "  edge [\n"
                      + "    source 3\n"
@@ -272,7 +246,7 @@ public class GmlImporterTest
                      + "    id 3\n"
                      + "  ]\n"
                      + "  node [\n"
-                     + "  ]\n"                     
+                     + "  ]\n"
                      + "]";
         // @formatter:on
 
@@ -307,10 +281,6 @@ public class GmlImporterTest
                      + "    id 3\n"
                      + "  ]\n"
                      + "  node [\n"
-                     + "  ]\n"                     
-                     + "  edge [\n"
-                     + "    source 1\n"
-                     + "    target 2\n"
                      + "  ]\n"
                      + "  edge [\n"
                      + "    source 1\n"
@@ -319,7 +289,11 @@ public class GmlImporterTest
                      + "  edge [\n"
                      + "    source 1\n"
                      + "    target 2\n"
-                     + "  ]\n"                     
+                     + "  ]\n"
+                     + "  edge [\n"
+                     + "    source 1\n"
+                     + "    target 2\n"
+                     + "  ]\n"
                      + "  edge [\n"
                      + "    source 2\n"
                      + "    target 3\n"
@@ -335,7 +309,7 @@ public class GmlImporterTest
                      + "  edge [\n"
                      + "    source 2\n"
                      + "    target 2\n"
-                     + "  ]\n"                     
+                     + "  ]\n"
                      + "]";
         // @formatter:on
 
@@ -350,29 +324,7 @@ public class GmlImporterTest
         throws ImportException
     {
         // @formatter:off
-        String input = "graph [\n"
-                     + "  comment \"Sample Graph\"\n"
-                     + "  directed 1\n"
-                     + "  node [\n"
-                     + "    id 1\n"
-                     + "  ]\n"
-                     + "  node [\n"
-                     + "    id 2\n"
-                     + "  ]\n"
-                     + "  node [\n"
-                     + "    id 3\n"
-                     + "  ]\n"
-                     + "  edge [\n"
-                     + "    source 1\n"
-                     + "    target 2\n"
-                     + "    weight 2.0\n"
-                     + "  ]\n"
-                     + "  edge [\n"
-                     + "    source 3\n"
-                     + "    target 1\n"
-                     + "    weight 3.0\n"
-                     + "  ]\n"
-                     + "]";
+        String input = readFromResourceFile("/gml/import/directed_weighted");
         // @formatter:on
 
         Graph<String, DefaultWeightedEdge> g =
@@ -391,7 +343,7 @@ public class GmlImporterTest
         throws ImportException
     {
         // @formatter:off
-            String input = "# A comment line\n" 
+            String input = "# A comment line\n"
             		     + "graph [\n"
                          + "  comment \"Sample Graph\"\n"
                          + "  directed 1\n"
@@ -434,9 +386,9 @@ public class GmlImporterTest
         throws ImportException
     {
         // @formatter:off
-        String input = "graph [ node [ id 1 ] node [ id 2 ] node [ id 3 ] " + 
-                       "edge [ source 1 target 2 weight 2.0 ] " + 
-                       "edge [ source 3 target 1 weight 3.0 ] ]"; 
+        String input = "graph [ node [ id 1 ] node [ id 2 ] node [ id 3 ] " +
+                       "edge [ source 1 target 2 weight 2.0 ] " +
+                       "edge [ source 3 target 1 weight 3.0 ] ]";
         // @formatter:on
 
         Graph<String, DefaultWeightedEdge> g =
@@ -502,8 +454,8 @@ public class GmlImporterTest
     public void testNotSupportedGraph()
     {
         // @formatter:off
-        String input = "graph [ node [ id 1 ] " + 
-                       "edge [ source 1 target 1 ] ]"; 
+        String input = "graph [ node [ id 1 ] " +
+                       "edge [ source 1 target 1 ] ]";
         // @formatter:on
 
         Graph<String, DefaultEdge> g = new SimpleGraph<>(
@@ -647,7 +599,7 @@ public class GmlImporterTest
                      + "  ]\n"
                      + "  node [\n"
                      + "    label \"Node\t\t?\""
-                     + "  ]\n"                     
+                     + "  ]\n"
                      + "]";
         // @formatter:on
 
@@ -818,7 +770,7 @@ public class GmlImporterTest
                      + "    id 1\n"
                      + "    frequency 2\n"
                      + "    customweight 1.2\n"
-                     + "    deep [ one [ one 1.0 two 2.0 ] two [ one \"1\" two \"2\" ] ]\n"                     
+                     + "    deep [ one [ one 1.0 two 2.0 ] two [ one \"1\" two \"2\" ] ]\n"
                      + "  ]\n"
                      + "  node [\n"
                      + "    id 2\n"
@@ -942,6 +894,16 @@ public class GmlImporterTest
         importer.importGraph(g, new StringReader(input));
 
         return g;
+    }
+
+    private String readFromResourceFile(String fileName) {
+        InputStream resourceAsStream = this.getClass().getResourceAsStream(fileName);
+        try {
+            return new String(resourceAsStream.readAllBytes(), "utf-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "";
+        }
     }
 
 }

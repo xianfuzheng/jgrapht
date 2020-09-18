@@ -27,7 +27,9 @@ public class GraphUtils {
     public static void loadGraphs() {
         for (String graphName : Arrays.asList("g1", "g2",
                 "book_p351", "book_p355", "book_p357",
-                "geeksforgeeks_strongly-connected-components")) {
+                "geeksforgeeks_strongly-connected-components",
+                "wiki_bi_connected_graph",
+                "bi_connected_graph_circle")) {
             graphMap.put(graphName, loadGraph(graphName));
         }
     }
@@ -69,7 +71,7 @@ public class GraphUtils {
     }
 
     public static void printResult( Map<String, GraphNodeInfo> nodeInfoMap) {
-
+        System.out.println("----------------- nodeInfoMap --------------------");
         for (String vertex : nodeInfoMap.keySet()) {
             GraphNodeInfo graphNodeInfo = nodeInfoMap.get(vertex);
             System.out.println(vertex + ":");

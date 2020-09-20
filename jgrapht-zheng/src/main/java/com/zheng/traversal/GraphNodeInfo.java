@@ -7,6 +7,7 @@ public class GraphNodeInfo {
     public String prevNode = null;
     public GraphNodeColor color = GraphNodeColor.WHITE;
 
+    // dfs
     public int d = 0;
     public int f = 0;
 
@@ -14,6 +15,12 @@ public class GraphNodeInfo {
     public int childrenCount = 0;
     public int depth = 0;
     public int lower = 0;
+
+    // kruskal
+    public int set = -1;
+
+    // Prim
+    public double dist = Integer.MAX_VALUE;
 
     public GraphNodeInfo(String node) {
         this.node = node;
@@ -30,6 +37,7 @@ public class GraphNodeInfo {
                 ", depth=" + depth +
                 ", lower=" + lower +
                 ", childrenCount=" + childrenCount +
+                ", set = " + set +
                 '}';
     }
 }

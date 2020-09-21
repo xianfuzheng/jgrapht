@@ -26,7 +26,8 @@ public class GraphUtils {
 
     public static void loadGraphs() {
         for (String graphName : Arrays.asList("g1", "g2",
-                "book_p351", "book_p355", "book_p357","book_p367",
+                "book_p351", "book_p355", "book_p357",
+                "book_p367","book_p379",
                 "geeksforgeeks_strongly-connected-components",
                 "wiki_bi_connected_graph",
                 "bi_connected_graph_circle")) {
@@ -43,7 +44,8 @@ public class GraphUtils {
         String input = readFromResourceFile("/graph/" + graphName+".json");
 
         Graph<String, CustomGraphEdge> g =
-                GraphTypeBuilder.directed().weighted(true)
+                GraphTypeBuilder
+                        .directed().weighted(true)
                         .allowingSelfLoops(true)
                 .vertexSupplier(SupplierUtil.createStringSupplier(1))
                 .edgeSupplier(SupplierUtil.createSupplier(CustomGraphEdge.class)).buildGraph();

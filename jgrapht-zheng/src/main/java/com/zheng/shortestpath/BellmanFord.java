@@ -24,15 +24,14 @@ public class BellmanFord {
         for (String vertex : g.vertexSet()) {
             graphNodeInfoMap.put(vertex, new GraphNodeInfo(vertex));
             if(vertex.equals(source)) {
-                graphNodeInfoMap.get(vertex).d = 0;
+                graphNodeInfoMap.get(vertex).dist = 0;
             } else {
-                graphNodeInfoMap.get(vertex).d = Integer.MAX_VALUE;
+                graphNodeInfoMap.get(vertex).dist = Integer.MAX_VALUE;
             }
         }
 
         int size = g.vertexSet().size();
         for (int i=0; i<size; i++) {
-
             for (CustomGraphEdge customGraphEdge : g.edgeSet()) {
                 String u = customGraphEdge.getSourceVertex();
                 String v = customGraphEdge.getTargetVertex();
@@ -41,17 +40,31 @@ public class BellmanFord {
             }
         }
 
-        GraphUtils.printResult(graphNodeInfoMap);
+        // check cycle
+        for (CustomGraphEdge customGraphEdge : g.edgeSet()) {
+            String u = customGraphEdge.getSourceVertex();
+            String v = customGraphEdge.getTargetVertex();
+            double w = customGraphEdge.getWeightValue();
+
+            double du = graphNodeInfoMap.get(u).dist;
+            double dv = graphNodeInfoMap.get(v).dist;
+
+            if( dv > (du + w + 1e-2)) {
+                System.out.println("Has negative weighted cycle from " + u +" to " + v +" w = " + w);
+            }
+        }
+
+         GraphUtils.printResult(graphNodeInfoMap);
     }
 
     private static void relax(String u, String v, double w) {
-        double d1 = graphNodeInfoMap.get(u).d;
-        double d2 = graphNodeInfoMap.get(v).d;
+        double d1 = graphNodeInfoMap.get(u).dist;
+        double d2 = graphNodeInfoMap.get(v).dist;
 
         if( (d1 + w) < d2) {
             // relax
             System.out.println("Use edge from " + u +" to " + v + " w=" + w);
-            graphNodeInfoMap.get(v).d = (int)(d1 + w);
+            graphNodeInfoMap.get(v).dist = d1 + w;
             graphNodeInfoMap.get(v).prevNode = u;
         }
     }

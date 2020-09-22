@@ -19,7 +19,6 @@ public class GraphNodeInfo {
     // kruskal
     public int set = -1;
 
-    // Prim
     public double dist = Integer.MAX_VALUE;
 
     public GraphNodeInfo(String node) {
@@ -38,6 +37,7 @@ public class GraphNodeInfo {
                 ", lower=" + lower +
                 ", childrenCount=" + childrenCount +
                 ", set = " + set +
+                ", dist = " + dist +
                 '}';
     }
 }

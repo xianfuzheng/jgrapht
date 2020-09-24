@@ -7,8 +7,16 @@ import org.jgrapht.Graph;
 public class FloydWarshall {
 
     public static void main(String [] args) {
-
         Graph<String, CustomGraphEdge> g = GraphUtils.getGraph("book_p402");
+        solve(g);
+
+        Graph<String, CustomGraphEdge> g1 = GraphUtils.getGraph("book_p402_negative_cycle");
+        solve(g1);
+
+    }
+
+    public static void solve(Graph<String, CustomGraphEdge> g) {
+
 
         int size = g.vertexSet().size();
 

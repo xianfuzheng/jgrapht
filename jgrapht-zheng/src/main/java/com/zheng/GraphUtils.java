@@ -26,8 +26,9 @@ public class GraphUtils {
 
     public static void loadGraphs() {
         for (String graphName : Arrays.asList("g1", "g2",
-                "book_p351", "book_p355", "book_p357","book_p382","book_p384","book_p402","book_p402_negative_cycle",
-                "book_p367","book_p379",
+                "book_p351", "book_p355", "book_p357","book_p382","book_p384",
+                "book_p402","book_p402_negative_cycle",
+                "book_p367","book_p379","book_p425",
                 "geeksforgeeks_strongly-connected-components",
                 "wiki_bi_connected_graph",
                 "bi_connected_graph_circle")) {
